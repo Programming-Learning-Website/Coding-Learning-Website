@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Coding Learning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+</head>
+
+<body id="body" class="bg-white text-gray-900 dark:bg-slate-900 dark:text-gray-100 transition-colors duration-300 min-h-screen">
+
+    <header class="fixed top-0 left-0 w-full z-50 bg-white/80 dark:bg-slate-900/85 backdrop-blur-md shadow-md transition-colors duration-300">
+        <nav class="max-w-7xl mx-auto flex items-center justify-between px-8 py-4">
+            <div class="flex items-center space-x-3">
+                <span class="px-3 py-2 rounded-2xl bg-[#2DD4BF]">
+                    <i class="fa-solid fa-code text-xl text-black"></i>
+                </span>
+                <span class="text-xl font-bold tracking-wide">CPLB</span>
+            </div>
+            <div class="flex items-center space-x-8">
+                <ul class="flex items-center space-x-6 list-none font-medium">
+                    <li><a href="../index.html" class="hover:text-[#2DD4BF] transition">Home</a></li>
+                    <li><a href="./Courses.html" class="text-[#2DD4BF] transition">Courses</a></li>
+                    <li><a href="./Library.html" class="hover:text-[#2DD4BF] transition">Lessons Library</a></li>
+                    <li><a href="./About&Contact.html" class="hover:text-[#2DD4BF] transition">About & Contact</a></li>
+                </ul>
+                <button id="darkModeBtn" onclick="toggleMode()" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition">
+                    🌙
+                </button>
+            </div>
+        </nav>
+    </header>
+
+
+    <script src="../js/Courses.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Coding Learning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+
+    
+    <style>
+
+        .main {
+            width: 100%;
+            padding: 2.5rem;
+        }
+
+        .right {
+            width: 100%;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .mobile-btn {
+            display: none;
+        }
+
+        .mobile-menu-drawer {
+            display: none;
+        }
+
+    
+        @media only screen and (max-width:800px) {
+            .main {
+                width: 80%;
+                padding: 0;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .right {
+                width: 100%;
+            }
+
+            .menu {
+                display: none;
+            }
+
+            .mobile-btn {
+                display: flex;
+            }
+
+            .team-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            }
+
+            .team-card-3 {
+                grid-column: span 2 / span 2;
+            }
+        }
+
+
+        @media only screen and (max-width:500px) {
+            .menu, .main, .right {
+                width: 100%;
+            }
+
+            .main {
+                padding: 0 1rem;
+            }
+
+            .team-grid {
+                grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+            }
+
+            .team-card-3 {
+                grid-column: span 1 / span 1;
+            }
+
+            .telegram-box {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .telegram-box a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body id="body"
+    class="bg-white text-gray-900 dark:bg-slate-900 dark:text-gray-100 transition-colors duration-300 min-h-screen">
+
+    <header
+        class="fixed top-0 left-0 w-full z-50 bg-white/80 dark:bg-slate-900/85 backdrop-blur-md shadow-md transition-colors duration-300">
+        <nav class="max-w-7xl mx-auto flex items-center justify-between px-8 py-4">
+            <div class="flex items-center space-x-3">
+                <span class="px-3 py-2 rounded-2xl bg-[#2DD4BF]">
+                    <i class="fa-solid fa-code text-xl text-black"></i>
+                </span>
+                <span class="text-xl font-bold tracking-wide">CPLB</span>
+            </div>
+
+            <!-- Desktop Links (.menu) -->
+            <div class="menu space-x-8">
+                <ul class="flex items-center space-x-6 list-none font-medium">
+                    <li><a href="../index.html" class="hover:text-[#2DD4BF] transition">Home</a></li>
+                    <li><a href="./Courses.html" class="hover:text-[#2DD4BF] transition">Courses</a></li>
+                    <li><a href="./Library.html" class="hover:text-[#2DD4BF] transition">Lessons Library</a></li>
+                    <li><a href="./About&Contact.html" class="text-[#2DD4BF] transition">About & Contact</a></li>
+                </ul>
+                <button id="darkModeBtn" onclick="toggleMode()"
+                    class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition">
+                    🌙
+                </button>
+            </div>
+
+            <!-- Mobile Toggle Button -->
+            <div class="mobile-btn items-center space-x-2">
+                <button onclick="toggleMode()" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700">🌙</button>
+                <button onclick="toggleMobileDrawer()" class="p-2 text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Drawer -->
+        <div id="mobileDrawer" class="mobile-menu-drawer bg-white dark:bg-slate-900 px-6 py-4 border-b border-gray-200 dark:border-gray-800 space-y-2">
+            <a href="../index.html" class="block py-1">Home</a>
+            <a href="./Courses.html" class="block py-1">Courses</a>
+            <a href="./Library.html" class="block py-1">Lessons Library</a>
+            <a href="./About&Contact.html" class="block py-1 text-[#2DD4BF] font-bold">About & Contact</a>
+        </div>
+    </header>
+
+    <!-- Content Area (.main) -->
+    <main class="main pt-32 pb-20 max-w-7xl mx-auto space-y-10">
+        
+        <div class="text-center mt-3 p-5">
+            <h5 class="text-emerald-400 p-3 font-bold">First-Year Student (Student Coding Project)</h5>
+            <h1 class="text-3xl font-bold mt-2">About the Team and Contact Information</h1>
+            <p class="mt-2">This website was created to assist IT students who wish to learn web development from scratch.</p>
+        </div>
+
+        <!-- Team Cards Grid -->
+        <div class="team-grid grid grid-cols-3 gap-4 max-w-7xl mx-auto p-4">
+            <div
+                class="bg-[#1c2739] border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 flex flex-col items-center text-center justify-between transition-all duration-300 hover:-translate-y-1 shadow-lg">
+                <img src="../Image/menghong.png" alt="Leader" class="w-20 h-20 rounded-full object-cover border-2 border-emerald-400">
+                <h3 class="text-2xl font-bold mt-3 text-white">Leader</h3>
+                <h5 class="text-emerald-400">Team Lead & Courses Page</h5>
+                <p class="text-white text-sm mt-2">Responsible for the architecture and structural layout of the homepage.</p>
+            </div>
+
+            <div
+                class="bg-[#1c2739] border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 flex flex-col items-center text-center justify-between transition-all duration-300 hover:-translate-y-1 shadow-lg">
+                <img src="../Image/le.png" alt="Member 1" class="w-20 h-20 rounded-full object-cover border-2 border-emerald-400">
+                <h3 class="text-2xl font-bold mt-3 text-white">Member 1</h3>
+                <h5 class="text-emerald-400">Home page & Responsive UI</h5>
+                <p class="text-white text-sm mt-2">Responsible for UI/UX design and mobile responsiveness.</p>
+            </div>
+
+            <div
+                class="team-card-3 bg-[#1c2739] border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 flex flex-col items-center text-center justify-between transition-all duration-300 hover:-translate-y-1 shadow-lg">
+                <img src="../Image/pisey.png" alt="Member 2" class="w-20 h-20 rounded-full object-cover border-2 border-emerald-400">
+                <h3 class="text-2xl font-bold mt-3 text-white">Member 2</h3>
+                <h5 class="text-emerald-400">Library page and About & Contact pages</h5>
+                <p class="text-white text-sm mt-2">Responsible for compiling lessons and practice exercise systems.</p>
+            </div>
+        </div>
+
+        <!-- Contact Box (.right) -->
+        <div class="right max-w-2xl mx-auto bg-[#1c2739] p-8 md:p-10 rounded-3xl border border-slate-800 shadow-2xl">
+
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-white">Contact Us</h2>
+                <p class="text-slate-400 text-sm mt-2">
+                    Send us a message; it will be forwarded directly to our email.
+                </p>
+            </div>
+
+            <div
+                class="telegram-box border border-emerald-500/40 bg-[#141d2b] p-4 rounded-xl flex items-center justify-between gap-4 mb-6">
+                <div class="flex items-center space-x-3">
+                    <div
+                        class="w-10 h-10 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold shrink-0">
+                        <i class="fa-brands fa-telegram text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold text-sm">Telegram Community</h4>
+                        <p class="text-slate-400 text-xs">Join our student group directly</p>
+                    </div>
+                </div>
+                <a href="https://t.me/sokpesey2027" target="_blank"
+                    class="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold px-4 py-2 rounded-full transition text-center">
+                    Chat
+                </a>
+            </div>
+
+            <!-- Form Inputs -->
+            <form action="#" method="POST" class="space-y-5">
+
+                <div>
+                    <label for="name" class="block text-sm font-medium text-slate-300 mb-2">
+                        Your Name
+                    </label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name..."
+                        class="w-full bg-[#121926] border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-400 transition" />
+                </div>
+
+                <div>
+                    <label for="email" class="block text-sm font-medium text-slate-300 mb-2">
+                        Your Email
+                    </label>
+                    <input type="email" id="email" name="email" required placeholder="example@domain.com"
+                        class="w-full bg-[#121926] border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-400 transition" />
+                </div>
+
+                <div>
+                    <label for="message" class="block text-sm font-medium text-slate-300 mb-2">
+                        Your Message
+                    </label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Write your message here..."
+                        class="w-full bg-[#121926] border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-400 transition resize-none"></textarea>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-emerald-400 hover:bg-emerald-500 text-slate-900 font-bold py-3 px-6 rounded-full transition duration-200 shadow-md hover:shadow-emerald-500/20">
+                    Send Message Now
+                </button>
+
+            </form>
+        </div>
+
+    </main>
+
+    <script>
+        function toggleMobileDrawer() {
+            const drawer = document.getElementById('mobileDrawer');
+            drawer.style.display = drawer.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function toggleMode() {
+            document.documentElement.classList.toggle('dark');
+        }
+    </script>
+    <script src="../js/About&Contact.js"></script>
+</body>
+
+</html>

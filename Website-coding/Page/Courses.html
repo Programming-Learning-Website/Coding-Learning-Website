@@ -21,7 +21,7 @@
                 </span>
                 <span class="text-xl font-bold tracking-wide">CPLB</span>
             </div>
-            <div class="flex items-center space-x-8">
+            <div class="hidden md:flex items-center space-x-8">
                 <ul class="flex items-center space-x-6 list-none font-medium">
                     <li><a href="../index.html" class="hover:text-[#2DD4BF] transition">Home</a></li>
                     <li><a href="./Courses.html" class="text-[#2DD4BF] transition">Courses</a></li>
@@ -32,11 +32,147 @@
                     🌙
                 </button>
             </div>
-        </nav>
+            <div class="flex items-center space-x-3 md:hidden">
+                <button onclick="toggleMode()"
+                    class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition">
+                    🌙
+                </button>
+                <button id="menuToggle" onclick="toggleMobileMenu()" class="p-2 text-2xl text-gray-700 dark:text-gray-200 focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+        </nav>             <!-- Mobile Dropdown Menu (បញ្ជី Menu ធ្លាក់ចុះពេលចុចលើទូរស័ព្ទ) -->
+        <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 pt-2 bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-gray-800 transition-all">
+            <ul class="flex flex-col space-y-3 font-medium">
+                <li><a href="../index.html" class="block hover:text-[#2DD4BF] transition py-1">Home</a></li>
+                <li><a href="../Page/Courses.html" class="block hover:text-[#2DD4BF] transition py-1">Courses</a></li>
+                <li><a href="../Page/Library.html" class="block hover:text-[#2DD4BF] transition text-[#2DD4BF] py-1">Lessons Library</a></li>
+                <li><a href="../Page/About&Contact.html" class="block hover:text-[#2DD4BF] transition py-1">About & Contact</a></li>
+            </ul>
+        </div>
     </header>
-
-
+    <main class="py-24 pt-24 max-w-7xl px-4 sm:px-8 justify-center mx-auto">
+      <div>
+        <div class="flex flex-col sm:flex-row  justify-between mb-8">
+          <div>
+            <h1 class="text-3xl font-bold text-gray-800 dark:text-white mt-2">
+              Course Catalog
+            </h1>
+            <p class="text-gray-600 dark:text-gray-400 md:text-lg mt-2">
+              Select a technology stack to start reading structured  lessons
+            </p>
+          </div>
+          <div class="search-box">
+            <span class="search-icon bg-[#2A374A] text-gray-300 focus:outline-none p-4 rounded-full gap-4 w-full md:w-80 flex items-center mt-2"">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input
+                id="courseSearch"
+                type="search"
+                data-placeholder="search"
+                placeholder="Search..." class=" text-gray-600 focus:outline-none px-4 w-full rounded-full"/>
+            </span>
+          </div>
+        </div>
+        
+     <!-- ===============cards============ -->
+      <!-- card1 -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
+          <article class="w-full bg-[#1E293B] text-white dark:bg-slate-800 shadow-md rounded-lg p-6  rounded-2xl p-5 hover:-translate-y-1 transition hover:border-[#F97316] hover:shadow-xl hover:shadow-[#F97316]/10 border-2 border-transparent">
+            <span class="text-[#F97316] border-2 px-4 border-[#F97316] rounded-2xl p-2">HTML5</span>
+            <h2 class="text-xl font-bold mb-2 py-2 mt-4">HTML Structure, Forms & Tables</h2>
+            <p class="mb-10">
+              Learn about Semantic HTML tags, creating forms to collect data,
+              and using tables.
+            </p>
+            <div class="w-full bg-[#2A374A] hover:bg-[#2DD4BF]/80 text-white py-2 px-4 rounded-full text-center">
+               <a class="  "
+              href="../Page/Library.html" data-i18n="start"
+               >Start Learning</a>
+            </div>
+             <!-- card2 -->
+          </article>
+          <article class="bg-[#1E293B] text-white dark:bg-slate-800 shadow-md rounded-lg p-6  bg-[#1E293B] rounded-2xl p-5 hover:-translate-y-1 transition hover:border-[#3B82F6] hover:shadow-xl hover:shadow-[#3B82F6]/10 border-2 border-transparent ">
+            <span class="text-[#3B82F6] border-2 px-6 border-[#3B82F6] rounded-2xl p-2 ">CSS3</span>
+            <h2 class="text-xl font-bold mb-2 py-2 mt-4">CSS Layouts & Responsive Design</h2>
+            <p class="mb-4">
+              Use Flexbox, Grid layouts, and Media Queries to make the website
+              responsive on mobile and desktop.
+            </p>
+            <div class="w-full bg-[#2A374A] hover:bg-[#2DD4BF]/80 text-white py-2 px-4 rounded-full text-center">
+              <a 
+                href="../Page/Library.html" data-i18n="start"
+                 >Start Learning</a>
+            </div>
+             <!-- card3 -->
+          </article>
+          <article class="bg-[#1E293B] text-white dark:bg-slate-800 shadow-md rounded-lg p-6   bg-[#1E293B] rounded-2xl p-5 hover:-translate-y-1 transition hover:border-[#EC4899] hover:shadow-xl hover:shadow-[#EC4899]/10 border-2 border-transparent ">
+            <span class="text-[#EC4899] border-2 px-2 border-[#EC4899] rounded-2xl p-2">Sass / SCSS</span>
+            <h2 class="text-xl font-bold mb-2 py-2 mt-4">Sass Variables, Nesting & Mixins</h2>
+            <p class="mb-4">
+              Speed up writing CSS by using the Sass preprocessor, which helps
+              manage large projects more efficiently.
+            </p>
+            <div class="w-full bg-[#2A374A] hover:bg-[#2DD4BF]/80 text-white py-2 px-4 rounded-full text-center">
+            <a 
+              href="../Page/Library.html" data-i18n="start"
+               >Start Learning</a
+            >
+            </div>
+             <!-- card4 -->
+          </article>
+          <article class="bg-[#1E293B] text-white dark:bg-slate-800 shadow-md rounded-lg p-6   duration-300 bg-[#30EE37 rounded-2xl p-5 hover:-translate-y-1 transition hover:border-[#C084FC] hover:shadow-xl hover:shadow-[#C084FC]/10 border-2 border-transparent ">
+            <span class="text-[#C084FC] border-2 px-2 border-[#C084FC] rounded-2xl p-2">Bootstrap 5</span>
+            <h2 class="text-xl font-bold mb-2 py-2 mt-4">Bootstrap 5 Grid & UI Components</h2>
+            <p class="mb-4">
+              Use the 12-column grid system, Navbar, Modals, Cards, and built-in
+              utilities.
+            </p>
+            <div class="w-full bg-[#2A374A] hover:bg-[#2DD4BF]/80 text-white py-2 px-4 rounded-full text-center">
+            <a 
+              href="../Page/Library.html" data-i18n="start"
+               >Start Learning</a
+            >
+            </div>
+             <!-- card5-->
+          </article>
+          <article class="bg-[#1E293B] text-white dark:bg-slate-800 shadow-md rounded-lg p-6   bg-[#1E293B] rounded-2xl p-5 hover:-translate-y-1 transition hover:border-[#38BDF8] hover:shadow-xl hover:shadow-[#38BDF8]/10 border-2 border-transparent">
+            <span class="text-[#38BDF8] border-2 px-2 border-[#38BDF8] rounded-2xl p-2">Tailwind CSS</span>
+            <h2 class="text-xl font-bold mb-2 py-2 mt-4">Tailwind CSS Utility-First Design</h2>
+            <p class="mb-4">
+              Learn to create clean and modern layouts using utility classes and
+              responsive modifiers.
+            </p>
+            <div class="w-full bg-[#2A374A] hover:bg-[#2DD4BF]/80 text-white py-2 px-4 rounded-full text-center">
+              <a class="  "
+                href="../Page/Library.html" data-i18n="start"
+                 >Start Learning</a>
+            </div>
+             <!-- card6 -->
+          </article>
+          <article class="bg-[#1E293B] text-white dark:bg-slate-800 shadow-md rounded-lg p-6   duration-300 bg-[#1E293B] rounded-2xl p-5 hover:-translate-y-1 transition hover:border-[#EAB308] hover:shadow-xl hover:shadow-[#EAB308]/10 border-2 border-transparent">
+            <span class="text-[#EAB308] border-2 px-2 border-[#EAB308] rounded-2xl p-2">JavaScript</span>
+            <h2 class="text-xl font-bold mb-2 py-2 mt-4">JavaScript DOM & Async Operations</h2>
+            <p class="mb-4">
+              Manage HTML elements, event listeners, and fetch data from APIs
+              using Fetch and Promises.
+            </p>
+            <div class="w-full bg-[#2A374A] hover:bg-[#2DD4BF]/80 text-white py-2 px-4 rounded-full text-center">
+              <a class="  "
+                href="../Page/Library.html" data-i18n="start"
+                 >Start Learning</a>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+    <footer class="bg-[#1C2739] px-4 py-6 text-center">
+        <p class="text-gray-400 text-xs sm:text-sm md:text-base">© 2026 CodeLearn - Web Development Fundamentals for 1st Year Students.</p>
+        <div class="flex justify-center gap-5 mt-3 text-2xl sm:text-3xl">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook text-white"></i></a>
+            <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram" style="color: rgb(25, 180, 228);"></i></a>
+        </div>
+    </footer>
     <script src="../js/Courses.js"></script>
 </body>
-
 </html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,30 +15,265 @@
 
 <body id="body" class="bg-white text-gray-900 dark:bg-slate-900 dark:text-gray-100 transition-colors duration-300 min-h-screen">
 
-    <header class="fixed top-0 left-0 w-full z-50 bg-white/80 dark:bg-slate-900/85 backdrop-blur-md shadow-md transition-colors duration-300">
-        <nav class="max-w-7xl mx-auto flex items-center justify-between px-8 py-4">
-            <div class="flex items-center space-x-3">
-                <span class="px-3 py-2 rounded-2xl bg-[#2DD4BF]">
-                    <i class="fa-solid fa-code text-xl text-black"></i>
+
+
+    <!-- Header / Navbar -->
+    <header
+    class="fixed top-0 left-0 w-full z-50 bg-white/80 dark:bg-slate-900/85 backdrop-blur-md shadow-md transition-colors duration-300">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-8 py-4">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+            <span class="px-3 py-2 rounded-2xl bg-[#2DD4BF]">
+                <i class="fa-solid fa-code text-xl text-black"></i>
+            </span>
+            <span class="text-xl font-bold tracking-wide">CPLB</span>
+        </div>
+
+        <!-- Desktop Navigation Menu (បង្ហាញតែលើអេក្រង់ធំ md:) -->
+        <div class="hidden md:flex items-center space-x-8">
+            <ul class="flex items-center space-x-6 list-none font-medium">
+                <li><a href="./index.html" class="hover:text-[#2DD4BF] transition text-[#2DD4BF]">Home</a></li>
+                <li><a href="./Page/Courses.html" class="hover:text-[#2DD4BF] transition">Courses</a></li>
+                <li><a href="./Page/Library.html" class="hover:text-[#2DD4BF] transition ">Lessons Library</a></li>
+                <li><a href="./Page/About&Contact.html" class="hover:text-[#2DD4BF] transition">About & Contact</a></li>
+            </ul>
+            <button id="darkModeBtn" onclick="toggleMode()"
+                class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition">
+                🌙
+            </button>
+        </div>
+
+        <!-- Mobile Controls (ប៊ូតុង Dark Mode និង Hamburger Menu សម្រាប់ទូរស័ព្ទ) -->
+        <div class="flex items-center space-x-3 md:hidden">
+            <button onclick="toggleMode()"
+                class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition">
+                🌙
+            </button>
+            <button id="menuToggle" onclick="toggleMobileMenu()" class="p-2 text-2xl text-gray-700 dark:text-gray-200 focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Dropdown Menu (បញ្ជី Menu ធ្លាក់ចុះពេលចុចលើទូរស័ព្ទ) -->
+    <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 pt-2 bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-gray-800 transition-all">
+        <ul class="flex flex-col space-y-3 font-medium">
+            <li><a href="./index.html" class="block hover:text-[#2DD4BF] transition py-1">Home</a></li>
+            <li><a href="./Page/Courses.html" class="block hover:text-[#2DD4BF] transition py-1">Courses</a></li>
+            <li><a href="./Page/Library.html" class="block hover:text-[#2DD4BF] transition text-[#2DD4BF] py-1">Lessons Library</a></li>
+            <li><a href="./Page/About&Contact.html" class="block hover:text-[#2DD4BF] transition py-1">About & Contact</a></li>
+        </ul>
+    </div>
+</header>
+   
+    <!-- ================= HERO ================= -->
+    <section class="flex items-center justify-center pt-24 pb-10 sm:pt-28 md:pt-32 md:pb-16 px-4 sm:px-6">
+        <div class="bg-[#1C2739] max-w-4xl w-full rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-14 text-center border border-slate-700/50">
+            <div class="inline-block mb-4 sm:mb-6">
+                <span class="bg-[#2dd4bf] text-[#0b132b] font-semibold text-xs sm:text-sm italic px-4 sm:px-6 py-1.5 sm:py-2 rounded-full shadow-md">
+                    1st Year Student Web Dev Roadmap
                 </span>
-                <span class="text-xl font-bold tracking-wide">CPLB</span>
             </div>
-            <div class="flex items-center space-x-8">
-                <ul class="flex items-center space-x-6 list-none font-medium">
-                    <li><a href="./index.html" class="text-[#2DD4BF] transition">Home</a></li>
-                    <li><a href="../Website-coding/Page/Courses.html" class="hover:text-[#2DD4BF] transition">Courses</a></li>
-                    <li><a href="../Website-coding/Page/Library.html" class="hover:text-[#2DD4BF] transition">Lessons Library</a></li>
-                    <li><a href="../Website-coding/Page/About&Contact.html" class="hover:text-[#2DD4BF] transition">About & Contact</a></li>
-                </ul>
-                <button id="darkModeBtn" onclick="toggleMode()" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition">
-                    🌙
+ 
+            <h1 class="text-white text-2xl sm:text-4xl lg:text-5xl font-extrabold leading-tight mb-4 sm:mb-6">
+                Master Coding &amp; Web Development
+                <span class="block text-[#2dd4bf]/70">Easily From Basics</span>
+            </h1>
+ 
+            <p class="text-slate-300 italic text-sm md:text-base max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed">
+                Strengthen your HTML, CSS, Sass, Bootstrap, Tailwind, and JavaScript skills with practical lessons,
+                framework comparisons, and copyable code snippets.
+            </p>
+ 
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+                <button
+                    class="bg-[#2dd4bf] hover:bg-[#26b8a5] text-[#0b132b] font-bold px-6 sm:px-8 py-3 sm:py-3.5 rounded-2xl transition-all duration-200 shadow-lg w-full sm:w-auto">
+                    <a href="./Page/Library.html">Start Learning Lessons</a>
+                </button>
+                <button
+                    class="bg-transparent hover:bg-[#2dd4bf]/10 text-white font-semibold px-6 sm:px-8 py-3 sm:py-3.5 rounded-2xl border-2 border-[#2dd4bf] transition-all duration-200 w-full sm:w-auto">
+                    <a href="./Page/Courses.html">Explore all Courses</a>
                 </button>
             </div>
-        </nav>
-    </header>
-
-
-    <script src="../js/Home.js"></script>
+        </div>
+    </section>
+ 
+    <main class="max-w-8xl mx-auto">
+ 
+        <!-- ================= ROADMAP ================= -->
+        <div class="px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-[#2DD4BF] text-sm sm:text-base">Study Structure</p>
+            <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold mt-1">1st Year Student Learning Roadmap (Step-by-Step)</h2>
+        </div>
+ 
+        <!-- 1 col mobile, 2 col tablet, 3 col desktop -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 px-4 sm:px-6 lg:px-8 py-6 text-gray-100">
+            <div class="bg-[#1C2739] p-5 rounded-2xl hover:-translate-y-1 transition hover:border-[#8df583] hover:shadow-xl hover:shadow-[#2DD4BF]/10 border-2 border-transparent">
+                <h5 class="text-[#F97316] py-1 sm:py-2">Step 1</h5>
+                <h3 class="text-lg sm:text-xl py-2 sm:py-4 font-bold">HTML5 Structure</h3>
+                <p class="text-gray-400 text-sm sm:text-base">Build semantic structure, user input forms, HTML tables, and link documents across pages.</p>
+            </div>
+            <div class="bg-[#1C2739] p-5 rounded-2xl hover:-translate-y-1 transition hover:border-[#ec8089] hover:shadow-xl hover:shadow-[#2DD4BF]/10 border-2 border-transparent">
+                <h5 class="text-[#2DD4BF] py-1 sm:py-2">Step 2</h5>
+                <h3 class="text-lg sm:text-xl py-2 sm:py-4 font-bold">CSS3 &amp; Frameworks</h3>
+                <p class="text-gray-400 text-sm sm:text-base">Style visually engaging websites with Flexbox, Grid, Media Queries, Sass, Bootstrap, &amp; Tailwind.</p>
+            </div>
+        
+            <div class="bg-[#1C2739] p-5 rounded-2xl hover:-translate-y-1 transition hover:border-[#7b72cf] hover:shadow-xl hover:shadow-[#2DD4BF]/10 border-2 border-transparent md:col-span-2 lg:col-span-1">
+                <h5 class="text-[#FACC15] py-1 sm:py-2">Step 3</h5>
+                <h3 class="text-lg sm:text-xl py-2 sm:py-4 font-bold">JavaScript Mechanics</h3>
+                <p class="text-gray-400 text-sm sm:text-base">Add interactive functionality, DOM manipulation, event handlers, and API Fetch requests.</p>
+            </div>
+        </div>
+ 
+        <div class="px-4 sm:px-6 lg:px-8 mt-6">
+            <div class="flex items-end justify-between gap-4">
+                <div>
+                    <h3 class="text-xl sm:text-2xl font-semibold">Featured Tech Stack</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm sm:text-base">Essential development technologies to master</p>
+                </div>
+                <a href="#" class="text-[#2DD4BF] whitespace-nowrap text-sm sm:text-base">See All <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <hr class="mt-3 border-gray-300 dark:border-gray-700">
+        </div>
+        <!-- 1 col mobile, 2 col tablet, 3 col desktop (6 cards in one grid) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 py-6 px-4 sm:px-6 lg:px-8 text-gray-300">
+            <div class="flex flex-col bg-[#1E293B] rounded-2xl p-5 hover:-translate-y-1 transition hover:border-[#7288cf] hover:shadow-xl hover:shadow-[#2DD4BF]/10 border-2 border-transparent">
+                <span><img src="./Image/HTML.png" alt="HTML5" class="w-12 h-12 object-contain p-2.5 bg-[#362C42] rounded-2xl"></span>
+                <h3 class="text-xl sm:text-2xl py-3 sm:py-4">HTML5 Fundamentals</h3>
+                <p class="text-sm sm:text-base">Learn how to create a website structure using Semantic Elements, Form Controls, and Media Tags.</p>
+                <div class="mt-auto pt-5">
+                    <button class="bg-[#334155] w-full rounded-2xl p-2 text-base sm:text-xl font-bold text-white/55 hover:bg-[#2DD4BF] hover:text-[#0b132b] transition">Start Learning Now</button>
+                </div>
+            </div>
+            <div class="flex flex-col bg-[#1E293B] rounded-2xl p-5 hover:-translate-y-1 transition hover:border-[#81fa8b] hover:shadow-xl hover:shadow-[#F97316]/10 border-2 border-transparent">
+                <span><img src="./Image/sass.png" alt="Sass" class="w-12 h-12 object-contain p-2.5 bg-[#362C42] rounded-2xl"></span>
+                <h3 class="text-xl sm:text-2xl py-3 sm:py-4">Sass / SCSS Styling</h3>
+                <p class="text-sm sm:text-base">Write CSS in a more organized and efficient way by using Variables, Mixins, Nesting, and Functions.</p>
+                <div class="mt-auto pt-5">
+                    <button class="bg-[#334155] w-full rounded-2xl p-2 text-base sm:text-xl font-bold text-white/55 hover:bg-[#2DD4BF] hover:text-[#0b132b] transition">Start Learning Now</button>
+                </div>
+            </div>
+            <div class="flex flex-col bg-[#1E293B] rounded-2xl p-5 hover:-translate-y-1 transition hover:border-[#f7b487] hover:shadow-xl hover:shadow-[#ad34ad]/10 border-2 border-transparent">
+                <span><img src="./Image/Tailwind.png" alt="Tailwind CSS" class="w-12 h-12 object-contain p-2.5 bg-[#362C42] rounded-2xl"></span>
+                <h3 class="text-xl sm:text-2xl py-3 sm:py-4">Tailwind CSS Framework</h3>
+                <p class="text-sm sm:text-base">Create modern UI designs quickly without leaving HTML by using popular utility-first classes.</p>
+                <div class="mt-auto pt-5">
+                    <button class="bg-[#334155] w-full rounded-2xl p-2 text-base sm:text-xl font-bold text-white/55 hover:bg-[#2DD4BF] hover:text-[#0b132b] transition">Start Learning Now</button>
+                </div>
+            </div>
+ 
+            <div class="flex flex-col bg-[#1E293B] rounded-2xl p-5 hover:-translate-y-1 transition hover:border-[#7be9ec] hover:shadow-xl hover:shadow-[#ad34ad]/10 border-2 border-transparent">
+                <span><img src="./Image/bootstrap.png" alt="Bootstrap" class="w-12 h-12 object-contain p-2.5 bg-[#362C42] rounded-2xl"></span>
+                <h3 class="text-xl sm:text-2xl py-3 sm:py-4">Bootstrap Fundamentals</h3>
+                <p class="text-sm sm:text-base">Learn how to build modern and responsive websites using Bootstrap, including Grid System, Components, Utilities, and Responsive Design.</p>
+                <div class="mt-auto pt-5">
+                    <button class="bg-[#334155] w-full rounded-2xl p-2 text-base sm:text-xl font-bold text-white/55 hover:bg-[#2DD4BF] hover:text-[#0b132b] transition">Start Learning Now</button>
+                </div>
+            </div>
+ 
+            <div class="flex flex-col bg-[#1E293B] rounded-2xl p-5 hover:-translate-y-1 transition hover:border-[#cb16f9] hover:shadow-xl hover:shadow-[#ad34ad]/10 border-2 border-transparent">
+                <span><img src="./Image/phython.png" alt="Python" class="w-12 h-12 object-contain p-2.5 bg-[#362C42] rounded-2xl"></span>
+                <h3 class="text-xl sm:text-2xl py-3 sm:py-4">Python Fundamentals</h3>
+                <p class="text-sm sm:text-base">Python is a programming language used for Web Development, Data Science, AI, Automation, and Backend Development.</p>
+                <div class="mt-auto pt-5">
+                    <button class="bg-[#334155] w-full rounded-2xl p-2 text-base sm:text-xl font-bold text-white/55 hover:bg-[#2DD4BF] hover:text-[#0b132b] transition">Start Learning Now</button>
+                </div>
+            </div>
+ 
+            <div class="flex flex-col bg-[#1E293B] rounded-2xl p-5 hover:-translate-y-1 transition hover:border-[#f91616] hover:shadow-xl hover:shadow-[#ad34ad]/10 border-2 border-transparent">
+                <span><img src="./Image/js.png" alt="JavaScript" class="w-12 h-12 object-contain p-2.5 bg-[#362C42] rounded-2xl"></span>
+                <h3 class="text-xl sm:text-2xl py-3 sm:py-4">JavaScript Fundamentals</h3>
+                <p class="text-sm sm:text-base">Learn the fundamentals of JavaScript, including Variables, Conditions, Loops, Functions, Arrays, and DOM Manipulation.</p>
+                <div class="mt-auto pt-5">
+                    <button class="bg-[#334155] w-full rounded-2xl p-2 text-base sm:text-xl font-bold text-white/55 hover:bg-[#2DD4BF] hover:text-[#0b132b] transition">Start Learning Now</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="max-w-8xl mx-auto py-10 sm:py-16 px-4 sm:px-6 lg:px-8 text-gray-300">
+        <div class="rounded-xl bg-[#1C2739] p-4 sm:p-6">
+            <div>
+                <p class="mb-1 text-xs font-bold text-yellow-400">Quick Comparison</p>
+                <h2 class="text-lg sm:text-xl font-bold text-white">Bootstrap 5 VS Tailwind CSS</h2>
+                <p class="mb-5 text-xs sm:text-sm text-gray-300">Which framework is suitable for your project?</p>
+            </div>     
+            <!-- table -->
+            <div class="overflow-x-auto">
+                <table class="w-full  text-left text-xs sm:text-sm">
+                    <thead>
+                        <tr class="bg-[#2DD4BF]/20 text-gray-200">
+                            <th class="px-3 py-2 font-bold">Feature</th>
+                            <th class="px-3 py-2 text-orange-400 font-bold">Bootstrap 5</th>
+                            <th class="px-3 py-2 text-cyan-400 font-bold">Tailwind CSS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-white/20 hover:bg-[#797D84] transition-colors">
+                            <td class="px-3 py-3 font-semibold">Approach</td>
+                            <td class="px-3 py-3 font-semibold">Component-based (Pre-built UI components)</td>
+                            <td class="px-3 py-3 font-semibold">Utility-first (Style with utility classes)</td>
+                        </tr>
+                        <tr class="border-b border-white/20 hover:bg-[#797D84] transition-colors">
+                            <td class="px-3 py-3 font-semibold">Customization</td>
+                            <td class="px-3 py-3">Easy (May require CSS overrides)</td>
+                            <td class="px-3 py-3 text-green-400">Highly flexible (Almost 100% customizable)</td>
+                        </tr>
+                        <tr class="border-b border-white/20 hover:bg-[#797D84] transition-colors">
+                            <td class="px-3 py-3 font-semibold">Learning Curve</td>
+                            <td class="px-3 py-3 text-green-400">Easy to learn</td>
+                            <td class="px-3 py-3">Requires learning many utility classes</td>
+                        </tr>
+                        <tr class="hover:bg-[#797D84] transition-colors">
+                            <td class="px-3 py-3 font-semibold">File Size</td>
+                            <td class="px-3 py-3">Slightly larger (Includes more CSS/JS)</td>
+                            <td class="px-3 py-3 text-green-400">Smaller (Purge unused CSS)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 px-4 sm:px-6 lg:px-8 pb-10 sm:pb-16">
+        <div class="bg-[#1C2739] p-5 sm:p-6 rounded-2xl hover:-translate-y-1 transition hover:border-[#2516f9] hover:shadow-xl hover:shadow-[#ad34ad]/10 border-2 border-transparent">
+            <h2 class="font-bold text-xl sm:text-2xl text-white">Why Choose CodeLearn?</h2>
+            <p class="text-gray-400 py-2 text-sm sm:text-base leading-relaxed">
+                This website is specially designed for first-year IT/Computer Science students, with
+                easy-to-understand explanations in both Khmer and English, along with
+                code examples that students can copy and practice immediately.
+            </p>
+        </div>
+        <div class="text-gray-300 bg-[#1C2739] p-5 sm:p-6 rounded-2xl hover:-translate-y-1 transition hover:border-[#cb16f9] hover:shadow-xl hover:shadow-[#ad34ad]/10 border-2 border-transparent flex items-center">
+    
+            <div class="grid grid-cols-3 gap-2 sm:gap-6 w-full text-center">
+                <div>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-[#2DD4BF]">20+</h3>
+                    <p class="text-xs sm:text-sm mt-1">Lessons Covered</p>
+                </div>
+                <div>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-[#F4B2B2]">6</h3>
+                    <p class="text-xs sm:text-sm mt-1">Technology</p>
+                </div>
+                <div>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-[#34D399]">100%</h3>
+                    <p class="text-xs sm:text-sm mt-1">Free</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-[#1C2739] px-4 py-6 text-center">
+        <p class="text-gray-400 text-xs sm:text-sm md:text-base">© 2026 CodeLearn - Web Development Fundamentals for 1st Year Students.</p>
+        <div class="flex justify-center gap-5 mt-3 text-2xl sm:text-3xl">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook text-white"></i></a>
+            <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram" style="color: rgb(25, 180, 228);"></i></a>
+        </div>
+    </footer>
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+    <script src="./js/Home.js"></script>
 </body>
-
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="Website CPLB" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Coding Learning</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../css/Courses.css" />
@@ -45,8 +45,8 @@
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
-
-        </nav>             <!-- Mobile Dropdown Menu (បញ្ជី Menu ធ្លាក់ចុះពេលចុចលើទូរស័ព្ទ) -->
+        </nav>            
+        <!-- Mobile Dropdown Menu -->
         <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 pt-2 bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-gray-800 transition-all">
             <ul class="flex flex-col space-y-3 font-medium">
                 <li><a href="../index.html" class="block hover:text-[#2DD4BF] transition py-1">Home</a></li>
@@ -56,141 +56,139 @@
             </ul>
         </div>
     </header>
+
     <main class="py-24 pt-24 max-w-7xl px-4 sm:px-8 justify-center mx-auto">
       <div>
-        <div class="flex flex-col sm:flex-row  justify-between mb-8">
+        <div class="flex flex-col sm:flex-row justify-between mb-8 items-start sm:items-center gap-4">
           <div>
             <h1 class="text-3xl font-bold text-gray-800 dark:text-white mt-2">
               Course Catalog
             </h1>
             <p class="text-gray-600 dark:text-gray-400 md:text-lg mt-2">
-              Select a technology stack to start reading structured  lessons
+              Select a technology stack to start reading structured lessons
             </p>
           </div>
-          <div class="search-box">
-            <span class="search-icon bg-[#2A374A] text-gray-300 focus:outline-none p-4 rounded-full gap-4 w-full md:w-80 flex items-center mt-2"">
-              <i class="fa-solid fa-magnifying-glass"></i>
+          <div class="search-box w-full sm:w-auto">
+            <span class="search-icon bg-[#1E293B] text-gray-300 focus:outline-none px-4 py-3 rounded-full w-full md:w-80 flex items-center border border-slate-700">
+              <i class="fa-solid fa-magnifying-glass mr-2"></i>
               <input
                 id="courseSearch"
                 type="search"
-                data-placeholder="search"
-                placeholder="Search..." class=" text-gray-600 focus:outline-none px-4 w-full rounded-full"/>
+                placeholder="Search..." 
+                class="bg-transparent text-gray-200 placeholder-gray-400 focus:outline-none w-full text-sm"/>
             </span>
           </div>
         </div>
         
-     <!-- ===============cards============ -->
-      <!-- card1 -->
-        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
-          <article class="w-full bg-[#1E293B] text-white dark:bg-slate-800 shadow-md rounded-lg p-6  rounded-2xl p-5 hover:-translate-y-1 transition hover:border-[#F97316] hover:shadow-xl hover:shadow-[#F97316]/10 border-2 border-transparent">
-            <span class="text-[#F97316] border-2 px-4 border-[#F97316] rounded-2xl p-2">HTML5</span>
-            <h2 class="text-xl font-bold mb-2 py-2 mt-4">HTML Structure, Forms & Tables</h2>
-            <p class="mb-10">
-              Learn about Semantic HTML tags, creating forms to collect data,
-              and using tables.
-            </p>
-            <div class="w-full bg-[#2A374A] hover:bg-[#2DD4BF]/80 text-white py-2 px-4 rounded-full text-center">
-               <a class="  "
-              href="../Page/Library.html" data-i18n="start"
-               >Start Learning</a>
+        <!-- =============== cards ============ -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- card 1 -->
+          <article class="w-full bg-[#1E293B] text-white dark:bg-slate-800 shadow-md rounded-lg p-6 hover:-translate-y-1 transition hover:border-[#F97316] hover:shadow-xl hover:shadow-[#F97316]/10 border-2 border-transparent flex flex-col justify-between">
+            <div>
+              <span class="text-[#F97316] border-2 px-4 border-[#F97316] rounded-2xl p-2 inline-block">HTML5</span>
+              <h2 class="text-xl font-bold mb-2 py-2 mt-4">HTML Structure, Forms & Tables</h2>
+              <p class="mb-10 text-gray-300 text-sm leading-relaxed">
+                Learn about Semantic HTML tags, creating forms to collect data, and using tables.
+              </p>
             </div>
-             <!-- card2 -->
-          </article>
-          <article class="bg-[#1E293B] text-white dark:bg-slate-800 shadow-md rounded-lg p-6  bg-[#1E293B] rounded-2xl p-5 hover:-translate-y-1 transition hover:border-[#3B82F6] hover:shadow-xl hover:shadow-[#3B82F6]/10 border-2 border-transparent ">
-            <span class="text-[#3B82F6] border-2 px-6 border-[#3B82F6] rounded-2xl p-2 ">CSS3</span>
-            <h2 class="text-xl font-bold mb-2 py-2 mt-4">CSS Layouts & Responsive Design</h2>
-            <p class="mb-4">
-              Use Flexbox, Grid layouts, and Media Queries to make the website
-              responsive on mobile and desktop.
-            </p>
-            <div class="w-full bg-[#2A374A] hover:bg-[#2DD4BF]/80 text-white py-2 px-4 rounded-full text-center">
-              <a 
-                href="../Page/Library.html" data-i18n="start"
-                 >Start Learning</a>
-            </div>
-             <!-- card3 -->
-          </article>
-          <article class="bg-[#1E293B] text-white dark:bg-slate-800 shadow-md rounded-lg p-6   bg-[#1E293B] rounded-2xl p-5 hover:-translate-y-1 transition hover:border-[#EC4899] hover:shadow-xl hover:shadow-[#EC4899]/10 border-2 border-transparent ">
-            <span class="text-[#EC4899] border-2 px-2 border-[#EC4899] rounded-2xl p-2">Sass / SCSS</span>
-            <h2 class="text-xl font-bold mb-2 py-2 mt-4">Sass Variables, Nesting & Mixins</h2>
-            <p class="mb-4">
-              Speed up writing CSS by using the Sass preprocessor, which helps
-              manage large projects more efficiently.
-            </p>
-            <div class="w-full bg-[#2A374A] hover:bg-[#2DD4BF]/80 text-white py-2 px-4 rounded-full text-center">
-            <a 
-              href="../Page/Library.html" data-i18n="start"
-               >Start Learning</a
-            >
-            </div>
-             <!-- card4 -->
-          </article>
-          <article class="bg-[#1E293B] text-white dark:bg-slate-800 shadow-md rounded-lg p-6   duration-300 bg-[#30EE37 rounded-2xl p-5 hover:-translate-y-1 transition hover:border-[#C084FC] hover:shadow-xl hover:shadow-[#C084FC]/10 border-2 border-transparent ">
-            <span class="text-[#C084FC] border-2 px-2 border-[#C084FC] rounded-2xl p-2">Bootstrap 5</span>
-            <h2 class="text-xl font-bold mb-2 py-2 mt-4">Bootstrap 5 Grid & UI Components</h2>
-            <p class="mb-4">
-              Use the 12-column grid system, Navbar, Modals, Cards, and built-in
-              utilities.
-            </p>
-            <div class="w-full bg-[#2A374A] hover:bg-[#2DD4BF]/80 text-white py-2 px-4 rounded-full text-center">
-            <a 
-              href="../Page/Library.html" data-i18n="start"
-               >Start Learning</a
-            >
-            </div>
-             <!-- card5-->
-          </article>
-          <article class="bg-[#1E293B] text-white dark:bg-slate-800 shadow-md rounded-lg p-6   bg-[#1E293B] rounded-2xl p-5 hover:-translate-y-1 transition hover:border-[#38BDF8] hover:shadow-xl hover:shadow-[#38BDF8]/10 border-2 border-transparent">
-            <span class="text-[#38BDF8] border-2 px-2 border-[#38BDF8] rounded-2xl p-2">Tailwind CSS</span>
-            <h2 class="text-xl font-bold mb-2 py-2 mt-4">Tailwind CSS Utility-First Design</h2>
-            <p class="mb-4">
-              Learn to create clean and modern layouts using utility classes and
-              responsive modifiers.
-            </p>
-            <div class="w-full bg-[#2A374A] hover:bg-[#2DD4BF]/80 text-white py-2 px-4 rounded-full text-center">
-              <a class="  "
-                href="../Page/Library.html" data-i18n="start"
-                 >Start Learning</a>
-            </div>
-             <!-- card6 -->
-          </article>
-          <article class="bg-[#1E293B] text-white dark:bg-slate-800 shadow-md rounded-lg p-6   duration-300 bg-[#1E293B] rounded-2xl p-5 hover:-translate-y-1 transition hover:border-[#EAB308] hover:shadow-xl hover:shadow-[#EAB308]/10 border-2 border-transparent">
-            <span class="text-[#EAB308] border-2 px-2 border-[#EAB308] rounded-2xl p-2">JavaScript</span>
-            <h2 class="text-xl font-bold mb-2 py-2 mt-4">JavaScript DOM & Async Operations</h2>
-            <p class="mb-4">
-              Manage HTML elements, event listeners, and fetch data from APIs
-              using Fetch and Promises.
-            </p>
-            <div class="w-full bg-[#2A374A] hover:bg-[#2DD4BF]/80 text-white py-2 px-4 rounded-full text-center">
-              <a class="  "
-                href="../Page/Library.html" data-i18n="start"
-                 >Start Learning</a>
+            <div class="w-full bg-[#2A374A] hover:bg-[#2DD4BF]/80 text-white py-2.5 px-4 rounded-full text-center transition">
+               <a href="../Page/Library.html" class="block w-full">Start Learning</a>
             </div>
           </article>
+
+          <!-- card 2 -->
+          <article class="w-full bg-[#1E293B] text-white dark:bg-slate-800 shadow-md rounded-lg p-6 hover:-translate-y-1 transition hover:border-[#3B82F6] hover:shadow-xl hover:shadow-[#3B82F6]/10 border-2 border-transparent flex flex-col justify-between">
+            <div>
+              <span class="text-[#3B82F6] border-2 px-6 border-[#3B82F6] rounded-2xl p-2 inline-block">CSS3</span>
+              <h2 class="text-xl font-bold mb-2 py-2 mt-4">CSS Layouts & Responsive Design</h2>
+              <p class="mb-10 text-gray-300 text-sm leading-relaxed">
+                Use Flexbox, Grid layouts, and Media Queries to make the website responsive on mobile and desktop.
+              </p>
+            </div>
+            <div class="w-full bg-[#2A374A] hover:bg-[#2DD4BF]/80 text-white py-2.5 px-4 rounded-full text-center transition">
+              <a href="../Page/Library.html" class="block w-full">Start Learning</a>
+            </div>
+          </article>
+
+          <!-- card 3 -->
+          <article class="w-full bg-[#1E293B] text-white dark:bg-slate-800 shadow-md rounded-lg p-6 hover:-translate-y-1 transition hover:border-[#EC4899] hover:shadow-xl hover:shadow-[#EC4899]/10 border-2 border-transparent flex flex-col justify-between">
+            <div>
+              <span class="text-[#EC4899] border-2 px-2 border-[#EC4899] rounded-2xl p-2 inline-block">Sass / SCSS</span>
+              <h2 class="text-xl font-bold mb-2 py-2 mt-4">Sass Variables, Nesting & Mixins</h2>
+              <p class="mb-10 text-gray-300 text-sm leading-relaxed">
+                Speed up writing CSS by using the Sass preprocessor, which helps manage large projects more efficiently.
+              </p>
+            </div>
+            <div class="w-full bg-[#2A374A] hover:bg-[#2DD4BF]/80 text-white py-2.5 px-4 rounded-full text-center transition">
+              <a href="../Page/Library.html" class="block w-full">Start Learning</a>
+            </div>
+          </article>
+
+          <!-- card 4 -->
+          <article class="w-full bg-[#1E293B] text-white dark:bg-slate-800 shadow-md rounded-lg p-6 hover:-translate-y-1 transition hover:border-[#C084FC] hover:shadow-xl hover:shadow-[#C084FC]/10 border-2 border-transparent flex flex-col justify-between">
+            <div>
+              <span class="text-[#C084FC] border-2 px-2 border-[#C084FC] rounded-2xl p-2 inline-block">Bootstrap 5</span>
+              <h2 class="text-xl font-bold mb-2 py-2 mt-4">Bootstrap 5 Grid & UI Components</h2>
+              <p class="mb-10 text-gray-300 text-sm leading-relaxed">
+                Use the 12-column grid system, Navbar, Modals, Cards, and built-in utilities.
+              </p>
+            </div>
+            <div class="w-full bg-[#2A374A] hover:bg-[#2DD4BF]/80 text-white py-2.5 px-4 rounded-full text-center transition">
+              <a href="../Page/Library.html" class="block w-full">Start Learning</a>
+            </div>
+          </article>
+
+          <!-- card 5 -->
+          <article class="w-full bg-[#1E293B] text-white dark:bg-slate-800 shadow-md rounded-lg p-6 hover:-translate-y-1 transition hover:border-[#38BDF8] hover:shadow-xl hover:shadow-[#38BDF8]/10 border-2 border-transparent flex flex-col justify-between">
+            <div>
+              <span class="text-[#38BDF8] border-2 px-2 border-[#38BDF8] rounded-2xl p-2 inline-block">Tailwind CSS</span>
+              <h2 class="text-xl font-bold mb-2 py-2 mt-4">Tailwind CSS Utility-First Design</h2>
+              <p class="mb-10 text-gray-300 text-sm leading-relaxed">
+                Learn to create clean and modern layouts using utility classes and responsive modifiers.
+              </p>
+            </div>
+            <div class="w-full bg-[#2A374A] hover:bg-[#2DD4BF]/80 text-white py-2.5 px-4 rounded-full text-center transition">
+              <a href="../Page/Library.html" class="block w-full">Start Learning</a>
+            </div>
+          </article>
+
+          <!-- card 6 -->
+          <article class="w-full bg-[#1E293B] text-white dark:bg-slate-800 shadow-md rounded-lg p-6 hover:-translate-y-1 transition hover:border-[#EAB308] hover:shadow-xl hover:shadow-[#EAB308]/10 border-2 border-transparent flex flex-col justify-between">
+            <div>
+              <span class="text-[#EAB308] border-2 px-2 border-[#EAB308] rounded-2xl p-2 inline-block">JavaScript</span>
+              <h2 class="text-xl font-bold mb-2 py-2 mt-4">JavaScript DOM & Async Operations</h2>
+              <p class="mb-10 text-gray-300 text-sm leading-relaxed">
+                Manage HTML elements, event listeners, and fetch data from APIs using Fetch and Promises.
+              </p>
+            </div>
+            <div class="w-full bg-[#2A374A] hover:bg-[#2DD4BF]/80 text-white py-2.5 px-4 rounded-full text-center transition">
+              <a href="../Page/Library.html" class="block w-full">Start Learning</a>
+            </div>
+          </article>
+
         </section>
       </div>
     </main>
-<footer class="w-full bg-[#0d1321] text-gray-400 py-6 px-4 sm:px-8 border-t border-slate-800/60">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-xs sm:text-sm">
-        <p class="text-center md:text-left">
-            ©2026 CodeLearn - Web Development Fundamentals for 1st Year Students.
-        </p>
 
-        <!-- Social Media Links -->
-        <div class="flex items-center space-x-6">
-            <!-- 1. PUT YOUR TELEGRAM LINK HERE -->
-            <a href="https://t.me/HENG LE _ WEP B 2027" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 hover:text-white transition">
-                <i class="fa-brands fa-telegram text-base"></i>
-                <span>Telegram</span>
-            </a>
-
-            <!-- 2. PUT YOUR FACEBOOK LINK HERE -->
-            <a href="https://facebook.com/YOUR_FACEBOOK_PAGE" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="hover:text-white transition">
-                <i class="fa-brands fa-facebook text-lg"></i>
-            </a>
+    <footer class="w-full bg-[#0d1321] text-gray-400 py-6 px-4 sm:px-8 border-t border-slate-800/60 mt-12">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-xs sm:text-sm">
+            <p class="text-center md:text-left">
+                ©2026 CodeLearn - Web Development Fundamentals for 1st Year Students.
+            </p>
+            <!-- Social Media Links -->
+            <div class="flex items-center space-x-6">
+                <a href="https://t.me/HENG LE _ WEP B 2027" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 hover:text-white transition">
+                    <i class="fa-brands fa-telegram text-base"></i>
+                    <span>Telegram</span>
+                </a>
+                <a href="https://facebook.com/YOUR_FACEBOOK_PAGE" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="hover:text-white transition">
+                    <i class="fa-brands fa-facebook text-lg"></i>
+                </a>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
+
     <script src="../js/Courses.js"></script>
 </body>
 </html>

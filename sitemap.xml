@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://coding-learning-website-website-cod.vercel.app/">
-
   <url>
-    <loc>https://hengsokpisey63-maker.github.io/Heng-sokpisey/</loc>
+    <loc>https://vercel.app</loc>
   </url>
-
+  <url>
+    <loc>https://vercel.apphistory</loc>
+  </url>
+  <url>
+    <loc>https://vercel.appabout</loc>
+  </url>
+  <url>
+    <loc>https://vercel.appprojects</loc>
+  </url>
+  <url>
+    <loc>https://vercel.appgallery</loc>
+  </url>
 </urlset>
